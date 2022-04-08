@@ -1,23 +1,29 @@
 import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './App.css';
+import { Button, Form } from 'react-bootstrap';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <div>
+  <Form>
+  <Form.Group className="mb-3" className="form" controlId="formBasicEmail">
+    <Form.Label>Email address</Form.Label>
+    <Form.Control type="email" placeholder="Enter email" />
+    <Form.Text className="text-muted">
+    </Form.Text>
+  </Form.Group>
+
+  <Form.Group className="mb-3" className="form" controlId="formBasicPassword">
+    <Form.Label>Password</Form.Label>
+    <Form.Control type="password" placeholder="Password" />
+  </Form.Group>
+  <Button variant="primary" type="submit" id="btn">
+    Submit
+  </Button>
+</Form>
     </div>
   );
 }
